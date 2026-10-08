@@ -129,8 +129,8 @@ Most free tools apply generic, untested registry files. WinOma is benchmark-driv
 </details>
 
 <details>
-<summary><b>Does WinOma works on plenty of games?</b></summary>  
-Many services on the market are related to 1 game, but WinOma makes your games run on maximum efficiency.  
+<summary><b>Does WinOMA work on plenty of games?</b></summary>  
+Yes. Unlike many services on the market that are tied to just one specific game, WinOMA optimizes your entire system, allowing all your games to run at maximum efficiency. 
 </details>
 
 ---
