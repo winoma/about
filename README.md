@@ -128,6 +128,11 @@ No. WinOma uses native Windows APIs, official group policies, and registry keys.
 Most free tools apply generic, untested registry files. WinOma is benchmark-driven, uses automated A/B measurements, supports full multi-step rollback, and detects hybrid CPU architectures.
 </details>
 
+<details>
+<summary><b>Does WinOma works on plenty of games?</b></summary>  
+Many services on the market are related to 1 game, but WinOma makes your games run on maximum efficiency.  
+</details>
+
 ---
 
 ## Work with us
