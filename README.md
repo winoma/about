@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="banner.png" alt="WinOMA — PC Performance Experts" width="100%">
+<img src="banner.png" alt="WinOma — PC Performance Experts" width="100%">
 
-# WinOMA Optimization Service
+# WinOma Optimization Service
 
 **PC performance experts: deep Windows tuning, low latency and stable frametimes.**
 
@@ -16,7 +16,7 @@
 
 ## About
 
-**WinOMA** (Windows Optimization & Maintenance Architecture) is a data-driven optimization framework for **Windows 11** (main target) and **Windows 10** (best effort), built by **Omar Ilyasov** (**omarizzw**), a Software Engineer and Computer Engineering Specialist based in Baku, Azerbaijan, working remotely with clients worldwide.
+**WinOma** (Windows Optimization & Maintenance Architecture) is a data-driven optimization framework for **Windows 11** (main target) and **Windows 10** (best effort), built by **Omar Ilyasov** (**omarizzw**), a Software Engineer and Computer Engineering Specialist based in Baku, Azerbaijan, working remotely with clients worldwide.
 
 It targets system latency, background overhead and frametime consistency, with every change measured, logged and reversible where the engine supports it.
 
@@ -27,10 +27,10 @@ It targets system latency, background overhead and frametime consistency, with e
 ## Key principles
 
 * **Measure first.** Every tweak carries an evidence label: `proven`, `situational`, `unproven` or `placebo`. Placebo tweaks are never applied, and unproven ones need an explicit flag.
-* **Reversible changes.** Registry changes and power-plan changes are written to an undo log (`undo-log.jsonl`) before they happen, and `Undo-WinOMA` restores them in reverse order. Removal of apps and services is not covered by the undo engine yet, so those tools warn before acting.
-* **Safe power plans.** WinOMA clones the active power plan and edits the copy. Your original plan is never modified, and undo switches back and deletes the clone.
+* **Reversible changes.** Registry changes and power-plan changes are written to an undo log (`undo-log.jsonl`) before they happen, and `Undo-WinOma` restores them in reverse order. Removal of apps and services is not covered by the undo engine yet, so those tools warn before acting.
+* **Safe power plans.** WinOma clones the active power plan and edits the copy. Your original plan is never modified, and undo switches back and deletes the clone.
 * **Hardware-aware.** Pre-flight detects laptop vs desktop, hybrid Intel CPUs (P/E cores), administrator rights and the Windows build, then skips tweaks that don't fit the machine.
-* **Restore point and log.** A restore point is requested before changes (Windows limits it to one per 24 hours by default), and every run writes a log and a JSON report to `C:\ProgramData\WinOMA\Logs`.
+* **Restore point and log.** A restore point is requested before changes (Windows limits it to one per 24 hours by default), and every run writes a log and a JSON report to `C:\ProgramData\WinOma\Logs`.
 
 ---
 
@@ -54,10 +54,10 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 WinOma v5-b
 └── Main
     ├── 00. Engine
-    │   ├── Apply-WinOMA.ps1              runs a profile (Full / Ultimate)
+    │   ├── Apply-WinOma.ps1              runs a profile (Full / Ultimate)
     │   ├── Catalog/catalog.json          tweaks: tier, risk, evidence, requirements
     │   ├── PreFlight/Check-Environment.ps1
-    │   └── BackupEngine/WinOMA.Backup.ps1   registry + power-plan backup and undo
+    │   └── BackupEngine/WinOma.Backup.ps1   registry + power-plan backup and undo
     ├── 0. Benchmarks                     CapFrameX, LatencyMon, timer tests
     ├── 1. Drivers
     └── 2. Settings                       Windows, hardware and app tweaks
@@ -104,6 +104,25 @@ Some tweaks reduce background services, convenience features or security protect
 
 ---
 
+## Frequently Asked Questions (FAQ)
+
+<details>
+<summary><b>Does WinOma work on laptops without draining the battery?</b></summary>
+Yes. WinOma features automatic chassis and power-source detection. On laptops, battery-draining tweaks are automatically bypassed, and EcoQoS policies are applied to keep background apps on E-Cores.
+</details>
+
+<details>
+<summary><b>Will this trigger Anti-Cheat software (VALORANT Vanguard, Easy Anti-Cheat)?</b></summary>
+No. WinOma uses native Windows APIs, official group policies, and registry keys. It does not patch system kernels or inject code into games.
+</details>
+
+<details>
+<summary><b>How is WinOma different from free tweak scripts?</b></summary>
+Most free tools apply generic, untested registry files. WinOma is benchmark-driven, uses automated A/B measurements, supports full multi-step rollback, and detects hybrid CPU architectures.
+</details>
+
+---
+
 ## Work with us
 
 Send me a message with your PC or laptop model, what is going wrong (FPS drops, stutters, latency, noise or heat) and your goals.
@@ -114,6 +133,6 @@ Whether you need custom software built from scratch, deep code optimization or s
 
 <div align="center">
 
-**WinOMA: PC Performance Experts**
+**WinOma: PC Performance Experts**
 
 </div>
