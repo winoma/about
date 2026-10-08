@@ -19,7 +19,7 @@
 
 ## About
 
-**WinOma** (Windows Optimization & Maintenance Architecture) is a data-driven optimization framework for **Windows 11** (main target) and **Windows 10** (best effort), built by **Omar Ilyasov** (**omarizzw**), a Software Engineer and Computer Engineering Specialist based in Baku, Azerbaijan, working remotely with clients worldwide.
+**WinOma** (Windows Optimization & Maintenance Architecture) is a data-driven optimization framework for **Windows 11** (main target) and **Windows 10** (best effort), built by **[Omar Ilyasov (omarizzw)](https://github.com/omarizzw)** Software Engineer and Computer Engineering Specialist based in Baku, Azerbaijan, working remotely with clients worldwide.
 
 It targets system latency, background overhead and frametime consistency, with every change measured, logged and reversible where the engine supports it.
 
