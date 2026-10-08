@@ -1,7 +1,7 @@
 # ⚡ WinOMA Pack — Windows Optimization & Architecture Framework
 
 <p align="center">
-  <img src="https://media.moderngamer.com/wp-content/uploads/2025/09/ultimate_windows_11_gaming_optimization_hvkt7.jpg?strip=all" alt="WinOMA Optimization Setup" width="100%"/>
+  <img src="banner.png" alt="WinOMA Banner" width="100%"/>
 </p>
 
 > **WinOMA (Windows Optimization & Maintenance Architecture)** is an enterprise-grade, data-driven optimization suite designed to eliminate system latency, remove OS bloatware, and enhance gaming frametime consistency on **Windows 10** and **Windows 11**.
