@@ -10,7 +10,7 @@
 [![Supported OS](https://img.shields.io/badge/Windows-11%20%7C%2010-0078D4?style=for-the-badge&logo=windows)](https://microsoft.com)
 [![License](https://img.shields.io/badge/License-Proprietary-red.svg?style=for-the-badge)](#disclaimer)
 
-[![WEBSITE](https://img.shields.io/badge/-WINOMA.APP-8A2BE2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://winoma.app)
+[![WEBSITE](https://img.shields.io/badge/-WINOMA.APP-8A2BE2?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTggMzBoMTVsMTAgMzAgMTAtMzBoMTRsMTAgMzAgMTAtMzBoMTVMNzQgNzZINjFMNTAgNDYgMzkgNzZIMjZ6Ii8+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjQiIGQ9Ik0xMCA2NUMzMCA4MiA3NSA3OCA5MCAzNSIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik04OCAyMmwyIDggOCAyLTggMi0yIDgtMi04LTgtMiA4LTJ6Ii8+PC9zdmc+)](https://winoma.app)
 [![MAIN CHANNEL](https://img.shields.io/badge/-MAIN%20CHANNEL-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/win_oma)
 [![RESULTS](https://img.shields.io/badge/-RESULTS-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/winoma_results)
 [![CHAT ME](https://img.shields.io/badge/-CHAT%20ME-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/omarizzww)
