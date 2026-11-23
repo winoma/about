@@ -23,7 +23,9 @@
 
 Are you facing performance bottlenecks, high resource usage, inefficient code or system latency issues?
 
-I'm **Omar Ilyasov** ([omarizzw](https://github.com/omarizzw)), founder of **WinOma Optimization Service**, based in Baku, Azerbaijan and working remotely with clients worldwide. I'm a Software Engineer and Computer Engineering Specialist focused on high-performance software development, code optimization and deep Windows OS tuning. I combine fundamental engineering principles with practical software design to deliver custom tweaks and maximum performance for your PC or laptop.
+**WinOma Optimization Service** was co-founded by **Omar Ilyasov** ([omarizzw](https://github.com/omarizzw)) and **Metin Quliyev**. WinOma is based in Baku, Azerbaijan, and works remotely with clients worldwide.
+
+I'm Omar Ilyasov, a Software Engineer and Computer Engineering Specialist focused on high-performance software development, code optimization and deep Windows OS tuning. I combine fundamental engineering principles with practical software design to deliver custom tweaks and maximum performance for your PC or laptop.
 
 **WinOma** (Windows Optimization & Maintenance Architecture) is a data-driven optimization framework for **Windows 11** (main target) and **Windows 10** (best effort). It targets system latency, background overhead and frametime consistency, with every change measured, logged and reversible where the engine supports it.
 
