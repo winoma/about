@@ -13,8 +13,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 [![WEBSITE](https://img.shields.io/badge/-WINOMA.APP-8A2BE2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://winoma.app)
-[![MAIN CHANNEL](https://img.shields.io/badge/-MAIN%20CHANNEL-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/win_oma)
 [![INSTAGRAM](https://img.shields.io/badge/-WINOMA.AZ-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/winoma.az)
+[![MAIN CHANNEL](https://img.shields.io/badge/-MAIN%20CHANNEL-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/win_oma)
 [![RESULTS](https://img.shields.io/badge/-RESULTS-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/winoma_results)
 
 </div>
