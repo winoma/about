@@ -82,12 +82,12 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 
 ---
 
-## 🩺WinOma Doctor
+## 🔍WinOma Scan
 
-**WinOma Doctor** is a lightweight, **read-only** diagnostic utility designed to evaluate your system's latency posture and overall readiness in seconds. It analyzes key OS and hardware bottlenecks to generate a **0–100 performance score**—making zero modifications to your system and collecting no personal data.
+**WinOma Scan** is a lightweight, **read-only** diagnostic utility designed to evaluate your system's latency posture and overall readiness in seconds. It analyzes key OS and hardware bottlenecks to generate a **0–100 performance score**—making zero modifications to your system and collecting no personal data.
 
 <div align="center">
-  <img src="assets/doctor-demo.svg" alt="WinOma Doctor running a read-only scan" width="100%">
+  <img src="assets/scan-demo.svg" alt="WinOma Scan running a read-only audit" width="100%">
 </div>
 
 ---
@@ -96,6 +96,7 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 
 | Tool | Description | Risk |
 |---|---|---|
+| **WinOma Scan** | Read-only system latency and health audit with a 0–100 score. | 🟢Safe (Read-Only) |
 | **WinOma Safe Performance Tweaks** | Conservative tweaks (Power Throttling, Game DVR) with automatic backup and restore. | 🟢Safe |
 | **WinOma System Tweaker** | Performance, privacy and UI tweaks with live status, plus Restore Defaults. | 🟡Moderate |
 | **WinOma Services (PC)** | PowerShell script that disables unneeded Windows services and background components. | 🟡Moderate |
@@ -155,4 +156,12 @@ Yes. Unlike many services that are tied to one specific game, WinOma optimizes y
 
 Send me a message with your PC or laptop model, what is going wrong (FPS drops, stutters, latency, noise or heat) and your goals.
 
-Whether you need custom software built from scratch, deep code optimization or system
+Whether you need custom software built from scratch, deep code optimization or system-wide latency reduction, feel free to get in touch.
+
+---
+
+<div align="center">
+
+**WinOma: PC Performance Experts**
+
+</div>
