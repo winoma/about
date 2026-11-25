@@ -98,7 +98,7 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 
 Some tweaks reduce background services, convenience features or security protections. Ultimate-profile tweaks can lower security and increase power use and heat, so don't use them on work PCs or laptops running on battery. Results vary by hardware. Use at your own risk.
 
-This project is proprietary software.
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
