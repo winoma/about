@@ -23,7 +23,7 @@
 
 ---
 
-## About
+## ℹ️About
 
 Are you facing performance bottlenecks, high resource usage, inefficient code or system latency issues?
 
@@ -82,7 +82,7 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 
 ---
 
-## Tools in this repository
+## 🛠️Tools in this repository
 
 | Tool | Description | Risk |
 |---|---|---|
@@ -96,7 +96,7 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 
 ---
 
-## Disclaimer
+## 📄Disclaimer
 
 Some tweaks reduce background services, convenience features or security protections. Ultimate-profile tweaks can lower security and increase power use and heat, so don't use them on work PCs or laptops running on battery. Results vary by hardware. Use at your own risk.
 
@@ -105,9 +105,9 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 
-## Contact Us
- - E-Mail:wiinooma@gmail.com
- - Telegram:[@omarizzww](https://t.me/omarizzww)
+## 📫Contact Us
+ - E-Mail: wiinooma@gmail.com
+ - Telegram: [@omarizzww](https://t.me/omarizzww)
 
 ## FAQ
 
@@ -141,7 +141,7 @@ Yes. Unlike many services that are tied to one specific game, WinOma optimizes y
 
 ---
 
-## Work with me
+## 🤝Work with me
 
 Send me a message with your PC or laptop model, what is going wrong (FPS drops, stutters, latency, noise or heat) and your goals.
 
