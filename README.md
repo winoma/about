@@ -35,7 +35,7 @@ Are you facing performance bottlenecks, high resource usage, inefficient code or
 
 ---
 
-## What We can do
+## 💻What We Can Do
 
 | Area | What you get |
 |---|---|
@@ -49,7 +49,7 @@ Are you facing performance bottlenecks, high resource usage, inefficient code or
 
 ---
 
-## 📋How We work
+## 📋How We Work
 
 1. **Audit:** hardware, drivers, BIOS, power/thermal profile and the current OS state.
 2. **Baseline:** repeatable benchmarks (CapFrameX, in-game benchmark maps) before anything is changed.
