@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src="assets/banner-animated.svg" alt="WinOma: PC Performance Experts" width="100%">
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/banner-mobile.svg">
+  <img src="assets/banner-animated.svg" alt="WinOma: PC Performance Experts" width="100%">
+</picture>
 
 # WinOma Optimization Service
 
@@ -8,16 +11,10 @@
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=650&lines=Low+System+Latency+%26+Stable+Frametimes;Benchmarked+%26+Fully+Reversible;Minimized+Input+Lag+%26+Boost+FPS" alt="Typing SVG" />
 </a>
 
-[![Supported OS](https://img.shields.io/badge/Windows-11%20%7C%2010-0078D4?style=for-the-badge&logo=windows)](#-faq)
+[![Supported OS](https://img.shields.io/badge/Windows-11%20%7C%2010-0078D4?style=for-the-badge&logo=windows)](#faq)
 [![Status](https://img.shields.io/badge/Status-Active%20Development-orange?style=for-the-badge&logo=github)](https://github.com/winoma/about)
-
 [![Anti-Cheat Safe](https://img.shields.io/badge/Anti--Cheat%20Safe-Vanguard%20%7C%20EAC%20%7C%20BattlEye-2ea44f?style=for-the-badge&logo=shield&logoColor=white)](#faq)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
-
-[![WEBSITE](https://img.shields.io/badge/-WINOMA.APP-8A2BE2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://winoma.app)
-[![INSTAGRAM](https://img.shields.io/badge/-WINOMA.AZ-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/winoma.az)
-[![MAIN CHANNEL](https://img.shields.io/badge/-MAIN%20CHANNEL-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/win_oma)
-[![RESULTS](https://img.shields.io/badge/-RESULTS-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/winoma_results)
 
 </div>
 
@@ -27,7 +24,7 @@
 
 Are you facing performance bottlenecks, high resource usage, inefficient code or system latency issues?
 
-**WinOma Optimization Service** is founded by **Omar Ilyasov** ([omarizzw](https://github.com/omarizzw)) and Co-Founder **Metin Quliyev**([t1nt1n](https://github.com/t1nt1n)). Based in Baku, Azerbaijan and working remotely with clients worldwide, we specialize in high-performance software development, code optimization, system automation and deep Windows OS tuning. Combining fundamental computer engineering principles with practical software design, we deliver custom tweaks and maximum performance for your PC or laptop.
+**WinOma Optimization Service** is founded by **Omar Ilyasov** ([omarizzw](https://github.com/omarizzw)) and Co-Founder **Metin Quliyev** ([t1nt1n](https://github.com/t1nt1n)). Based in Baku, Azerbaijan and working remotely with clients worldwide, we specialize in high-performance software development, code optimization, system automation and deep Windows OS tuning. Combining fundamental computer engineering principles with practical software design, we deliver custom tweaks and maximum performance for your PC or laptop.
 
 **WinOma** (Windows Optimization & Maintenance Architecture) is a data-driven optimization framework for **Windows 11** (main target) and **Windows 10** (best effort). It targets system latency, background overhead and frametime consistency, with every change measured, logged and reversible where the engine supports it.
 
@@ -37,15 +34,13 @@ Are you facing performance bottlenecks, high resource usage, inefficient code or
 
 ## 💻What We Can Do
 
-| Area | What you get |
-|---|---|
-| **Software Development & Architecture** | Clean, reliable and scalable applications tailored to your technical requirements. |
-| **Performance Optimization** | Refactoring code bases, reducing CPU/RAM overhead and eliminating system bottlenecks for faster execution. |
-| **OS & System-Level Tuning** | Fine-tuning Windows settings, managing services and telemetry, debloating unnecessary background apps and optimizing low-level configuration for peak gaming and work performance. |
-| **Hardware Optimization** | CPU/GPU affinity, MSI (Message Signaled Interrupts) mode and interrupt affinity policies for minimum latency. |
-| **Custom Packs & Automation** | Safe PowerShell, Batch and custom scripts to automate routine tasks, debloat OS environments and deploy registry tweaks. |
-| **In-Game Performance Optimization** | Fewer frame drops, FPS fluctuations and micro-stutters. A fully optimized OS and game configuration with stable frametimes and minimal input lag. |
-| **Monitor Setup & Calibration** | Individual monitor tuning for color accuracy, optimal scaling, better display responsiveness and an immersive viewing experience. |
+- **Software Development & Architecture:** clean, reliable and scalable applications tailored to your technical requirements.
+- **Performance Optimization:** refactoring code bases, reducing CPU/RAM overhead and eliminating system bottlenecks for faster execution.
+- **OS & System-Level Tuning:** fine-tuning Windows settings, managing services and telemetry, debloating unnecessary background apps and optimizing low-level configuration for peak gaming and work performance.
+- **Hardware Optimization:** CPU/GPU affinity, MSI (Message Signaled Interrupts) mode and interrupt affinity policies for minimum latency.
+- **Custom Packs & Automation:** safe PowerShell, Batch and custom scripts to automate routine tasks, debloat OS environments and deploy registry tweaks.
+- **In-Game Performance Optimization:** fewer frame drops, FPS fluctuations and micro-stutters. A fully optimized OS and game configuration with stable frametimes and minimal input lag.
+- **Monitor Setup & Calibration:** individual monitor tuning for color accuracy, optimal scaling, better display responsiveness and an immersive viewing experience.
 
 ---
 
@@ -73,10 +68,10 @@ Are you facing performance bottlenecks, high resource usage, inefficient code or
 | | **⚡Full** | **🔥Ultimate** |
 |---|---|---|
 | For | Daily PCs, work and gaming | Dedicated competitive gaming PCs |
-| Approach | Low-risk tweaks that keep the system stable, secure and usable | Aggressive tweaks for maximum low latency |
+| Approach | Low-risk, stable, secure | Aggressive, maximum low latency |
 | Trade-offs | None expected | May reduce security, power saving or convenience |
-| Confirmation | Standard | Warning shown, the user must type `I UNDERSTAND` |
-| Includes | Safe and moderate tweaks | Everything in Full plus Ultimate-only tweaks |
+| Confirmation | Standard | User must type `I UNDERSTAND` |
+| Includes | Safe and moderate tweaks | Full + Ultimate-only tweaks |
 
 Advanced-risk tweaks are never applied in Full. Windows security features that cost performance (such as Memory Integrity) are Ultimate-only, with a clear warning.
 
@@ -84,10 +79,13 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 
 ## 🔍WinOma Scan
 
-**WinOma Scan** is a lightweight, **read-only** diagnostic utility designed to evaluate your system's latency posture and overall readiness in seconds. It analyzes key OS and hardware bottlenecks to generate a **0–100 performance score**—making zero modifications to your system and collecting no personal data.
+**WinOma Scan** is a lightweight, **read-only** diagnostic utility that evaluates your system's latency posture and overall readiness in seconds. It analyzes key OS and hardware bottlenecks to generate a **0–100 performance score**, making zero modifications to your system and collecting no personal data.
 
 <div align="center">
-  <img src="assets/scan-demo.svg" alt="WinOma Scan running a read-only audit" width="100%">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/scan-demo-mobile.svg">
+    <img src="assets/scan-demo.svg" alt="WinOma Scan running a read-only audit" width="100%">
+  </picture>
 </div>
 
 ```powershell
@@ -98,14 +96,12 @@ powershell -ExecutionPolicy Bypass -File .\WinOma_Scan.ps1
 
 ## 🛠️Tools in this repository
 
-| Tool | Description | Risk |
-|---|---|---|
-| **WinOma Scan** | Read-only system latency and health audit with a 0–100 score. | 🟢Safe (Read-Only) |
-| **WinOma Safe Performance Tweaks** | Conservative tweaks (Power Throttling, Game DVR) with automatic backup and restore. | 🟢Safe |
-| **WinOma System Tweaker** | Performance, privacy and UI tweaks with live status, plus Restore Defaults. | 🟡Moderate |
-| **WinOma Services (PC)** | PowerShell script that disables unneeded Windows services and background components. | 🟡Moderate |
-| **WinOma Bloatware Remover** | Menu-driven removal of preinstalled Windows apps (Copilot, Teams, Clipchamp, Feedback Hub and more), one by one or all at once. | 🟡Moderate |
-| **WinOma USB Power Tweak** | USB device and root hub power-management tuning. | 🔴Advanced |
+- 🟢 **WinOma Scan** (Safe, read-only): system latency and health audit with a 0–100 score.
+- 🟢 **WinOma Safe Performance Tweaks** (Safe): conservative tweaks (Power Throttling, Game DVR) with automatic backup and restore.
+- 🟡 **WinOma System Tweaker** (Moderate): performance, privacy and UI tweaks with live status, plus Restore Defaults.
+- 🟡 **WinOma Services (PC)** (Moderate): disables unneeded Windows services and background components.
+- 🟡 **WinOma Bloatware Remover** (Moderate): menu-driven removal of preinstalled apps (Copilot, Teams, Clipchamp, Feedback Hub and more), one by one or all at once.
+- 🔴 **WinOma USB Power Tweak** (Advanced): USB device and root hub power-management tuning.
 
 > [!CAUTION]
 > **Before you run anything:** Create a system restore point, inspect the script contents, and test on a non-critical machine first.
@@ -121,8 +117,20 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ## 📫Contact Us
+
+<div align="center">
+
+[![WEBSITE](https://img.shields.io/badge/-WINOMA.APP-8A2BE2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://winoma.app)
+[![INSTAGRAM](https://img.shields.io/badge/-WINOMA.AZ-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/winoma.az)
+[![MAIN CHANNEL](https://img.shields.io/badge/-MAIN%20CHANNEL-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/win_oma)
+[![RESULTS](https://img.shields.io/badge/-RESULTS-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/winoma_results)
+
+</div>
+
 - E-Mail: [hello@winoma.app](mailto:hello@winoma.app)
 - Telegram: [@omarizzww](https://t.me/omarizzww)
+
+---
 
 ## FAQ
 
