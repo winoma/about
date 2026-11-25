@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src="assets/banner-animated.svg" alt="WinOma: PC Performance Experts" width="100%">
+<picture>
+  <source media="(max-width: 600px) and (hover: none) and (pointer: coarse)" srcset="assets/banner-mobile.svg">
+  <img src="assets/banner-animated.svg" alt="WinOma: PC Performance Experts" width="100%">
+</picture>
 
 # WinOma Optimization Service
 
@@ -78,9 +81,10 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 
 **WinOma Scan** is a lightweight, **read-only** diagnostic utility that evaluates your system's latency posture and overall readiness in seconds. It analyzes key OS and hardware bottlenecks to generate a **0–100 performance score**, making zero modifications to your system and collecting no personal data.
 
-<div align="center">
+ <picture>
+  <source media="(max-width: 600px) and (hover: none) and (pointer: coarse)" srcset="assets/scan-demo-mobile.svg">
   <img src="assets/scan-demo.svg" alt="WinOma Scan running a read-only audit" width="100%">
-</div>
+</picture>
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\WinOma_Scan.ps1
