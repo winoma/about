@@ -19,6 +19,10 @@
 [![MAIN CHANNEL](https://img.shields.io/badge/-MAIN%20CHANNEL-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/win_oma)
 [![RESULTS](https://img.shields.io/badge/-RESULTS-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/winoma_results)
 
+<br>
+
+<img src="assets/doctor-demo.svg" alt="WinOma Doctor running a read-only scan" width="100%">
+
 </div>
 
 ---
@@ -105,10 +109,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-
 ## 📫Contact Us
- - E-Mail: wiinooma@gmail.com
- - Telegram: [@omarizzww](https://t.me/omarizzww)
+- E-Mail: [hello@winoma.app](mailto:hello@winoma.app)
+- Telegram: [@omarizzww](https://t.me/omarizzww)
 
 ## FAQ
 
@@ -146,12 +149,4 @@ Yes. Unlike many services that are tied to one specific game, WinOma optimizes y
 
 Send me a message with your PC or laptop model, what is going wrong (FPS drops, stutters, latency, noise or heat) and your goals.
 
-Whether you need custom software built from scratch, deep code optimization or system-wide latency reduction, feel free to get in touch.
-
----
-
-<div align="center">
-
-**WinOma: PC Performance Experts**
-
-</div>
+Whether you need custom software built from scratch, deep code optimization or system
