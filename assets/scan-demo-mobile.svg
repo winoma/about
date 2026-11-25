@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 520" width="460" height="520" font-family="JetBrains Mono, Cascadia Mono, Consolas, monospace" font-size="14">
+  <defs>
+    <linearGradient id="bar" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#8a2be2"/>
+      <stop offset="1" stop-color="#ffcc4d"/>
+    </linearGradient>
+    <clipPath id="typing">
+      <rect x="20" y="76" height="24" width="0">
+        <animate attributeName="width" values="0;0;150;150;0" keyTimes="0;0.021;0.129;0.96;1" dur="14s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <!-- window -->
+  <rect x="0.5" y="0.5" width="459" height="519" rx="12" fill="#0e0b16" stroke="#2a1f3d"/>
+  <path d="M12.5 0.5 H447.5 A12 12 0 0 1 459.5 12.5 V36 H0.5 V12.5 A12 12 0 0 1 12.5 0.5 Z" fill="#171225"/>
+  <circle cx="22" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="42" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="62" cy="18" r="6" fill="#28c840"/>
+  <text x="230" y="23" text-anchor="middle" fill="#8b7fa8" font-size="13">WinOma Scan</text>
+
+  <g xml:space="preserve">
+    <!-- command (two lines so it fits a phone) -->
+    <text x="20" y="66" fill="#8b7fa8">PS C:\WinOma&gt;</text>
+    <text x="20" y="92" fill="#e6e1f0" clip-path="url(#typing)">.\WinOma_Scan.ps1</text>
+
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.157;0.96" dur="14s" repeatCount="indefinite"/>
+      <text x="20" y="122"><tspan fill="#b57bff" font-weight="bold">winoma &gt;&gt;</tspan><tspan fill="#e6e1f0"> WinOma Scan v1.0.1-beta</tspan></text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.186;0.96" dur="14s" repeatCount="indefinite"/>
+      <text x="20" y="144"><tspan fill="#b57bff" font-weight="bold">winoma &gt;&gt;</tspan><tspan fill="#8b7fa8"> Read-only. Changes nothing.</tspan></text>
+    </g>
+
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.229;0.96" dur="14s" repeatCount="indefinite"/>
+      <text x="20" y="174" fill="#b57bff" font-weight="bold">POWER</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.25;0.96" dur="14s" repeatCount="indefinite"/>
+      <text y="196"><tspan x="20" fill="#3ddc84">[OK]</tspan><tspan x="84" fill="#e6e1f0">Power plan</tspan><tspan x="440" text-anchor="end" fill="#8b7fa8">High perf</tspan></text>
+    </g>
+
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.286;0.96" dur="14s" repeatCount="indefinite"/>
+      <text x="20" y="224" fill="#b57bff" font-weight="bold">GAMING</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.307;0.96" dur="14s" repeatCount="indefinite"/>
+      <text y="246"><tspan x="20" fill="#ffcc4d">[WARN]</tspan><tspan x="84" fill="#e6e1f0">Background rec.</tspan><tspan x="440" text-anchor="end" fill="#8b7fa8">Capture on</tspan></text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.336;0.96" dur="14s" repeatCount="indefinite"/>
+      <text y="268"><tspan x="20" fill="#3ddc84">[OK]</tspan><tspan x="84" fill="#e6e1f0">GPU scheduling</tspan><tspan x="440" text-anchor="end" fill="#8b7fa8">HAGS on</tspan></text>
+    </g>
+
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.371;0.96" dur="14s" repeatCount="indefinite"/>
+      <text x="20" y="296" fill="#b57bff" font-weight="bold">BACKGROUND</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.393;0.96" dur="14s" repeatCount="indefinite"/>
+      <text y="318"><tspan x="20" fill="#ff5c7a">[FAIL]</tspan><tspan x="84" fill="#e6e1f0">Startup apps</tspan><tspan x="440" text-anchor="end" fill="#8b7fa8">14 at boot</tspan></text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.421;0.96" dur="14s" repeatCount="indefinite"/>
+      <text y="340"><tspan x="20" fill="#ffcc4d">[WARN]</tspan><tspan x="84" fill="#e6e1f0">Processes</tspan><tspan x="440" text-anchor="end" fill="#8b7fa8">163 running</tspan></text>
+    </g>
+
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.457;0.96" dur="14s" repeatCount="indefinite"/>
+      <text x="20" y="368" fill="#b57bff" font-weight="bold">HARDWARE</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.479;0.96" dur="14s" repeatCount="indefinite"/>
+      <text y="390"><tspan x="20" fill="#3ddc84">[OK]</tspan><tspan x="84" fill="#e6e1f0">GPU driver age</tspan><tspan x="440" text-anchor="end" fill="#8b7fa8">41 days</tspan></text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.507;0.96" dur="14s" repeatCount="indefinite"/>
+      <text y="412"><tspan x="20" fill="#ffcc4d">[WARN]</tspan><tspan x="84" fill="#e6e1f0">GPU MSI mode</tspan><tspan x="440" text-anchor="end" fill="#8b7fa8">Off</tspan></text>
+    </g>
+
+    <!-- score -->
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.557;0.96" dur="14s" repeatCount="indefinite"/>
+      <text x="20" y="448" fill="#b57bff" font-weight="bold">SCORE</text>
+      <rect x="84" y="436" width="170" height="14" rx="3" fill="#2a1f3d"/>
+      <rect x="84" y="436" height="14" rx="3" width="0" fill="url(#bar)">
+        <animate attributeName="width" values="0;0;121;121;0" keyTimes="0;0.557;0.643;0.96;1" dur="14s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.657;0.96" dur="14s" repeatCount="indefinite"/>
+      <text x="266" y="448"><tspan fill="#ffcc4d" font-weight="bold">71/100</tspan><tspan x="440" text-anchor="end" fill="#8b7fa8">Needs tuning</tspan></text>
+    </g>
+
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.714;0.96" dur="14s" repeatCount="indefinite"/>
+      <text x="20" y="480"><tspan fill="#b57bff" font-weight="bold">winoma &gt;&gt;</tspan><tspan fill="#e6e1f0"> Top fix: trim startup apps</tspan></text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.757;0.96" dur="14s" repeatCount="indefinite"/>
+      <text x="20" y="502"><tspan fill="#b57bff" font-weight="bold">winoma &gt;&gt;</tspan><tspan fill="#e6e1f0"> Want 95+? </tspan><tspan fill="#26a5e4">t.me/omarizzww</tspan></text>
+      <rect x="302" y="490" width="9" height="16" fill="#b57bff">
+        <animate attributeName="opacity" calcMode="discrete" values="1;0" dur="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+</svg>
