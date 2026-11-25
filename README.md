@@ -86,11 +86,11 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 
 | Tool | Description | Risk |
 |---|---|---|
-| **WinOma Safe Performance Tweaks** | Conservative tweaks (Power Throttling, Game DVR) with automatic backup and restore. | Safe |
-| **WinOma System Tweaker** | Performance, privacy and UI tweaks with live status, plus Restore Defaults. | Moderate |
-| **WinOma Services (PC)** | PowerShell script that disables unneeded Windows services and background components. | Moderate |
-| **WinOma Bloatware Remover** | Menu-driven removal of preinstalled Windows apps (Copilot, Teams, Clipchamp, Feedback Hub and more), one by one or all at once. | Moderate |
-| **WinOma USB Power Tweak** | USB device and root hub power-management tuning. | Advanced |
+| **WinOma Safe Performance Tweaks** | Conservative tweaks (Power Throttling, Game DVR) with automatic backup and restore. | 🟢Safe |
+| **WinOma System Tweaker** | Performance, privacy and UI tweaks with live status, plus Restore Defaults. | 🟡Moderate |
+| **WinOma Services (PC)** | PowerShell script that disables unneeded Windows services and background components. | 🟡Moderate |
+| **WinOma Bloatware Remover** | Menu-driven removal of preinstalled Windows apps (Copilot, Teams, Clipchamp, Feedback Hub and more), one by one or all at once. | 🟡Moderate |
+| **WinOma USB Power Tweak** | USB device and root hub power-management tuning. | 🔴Advanced |
 
 > [!CAUTION]
 > **Before you run anything:** Create a system restore point, inspect the script contents, and test on a non-critical machine first.
