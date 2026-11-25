@@ -142,7 +142,7 @@ Yes. Unlike many services that are tied to one specific game, WinOma optimizes y
 
 ---
 
-## 🤝Work with me
+## 🤝Work With Us
 
 Send me a message with your PC or laptop model, what is going wrong (FPS drops, stutters, latency, noise or heat) and your goals.
 
