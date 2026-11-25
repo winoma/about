@@ -90,6 +90,10 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
   <img src="assets/scan-demo.svg" alt="WinOma Scan running a read-only audit" width="100%">
 </div>
 
+```powershell
+powershell -ExecutionPolicy Bypass -File .\WinOma_Doctor.ps1
+```
+
 ---
 
 ## 🛠️Tools in this repository
