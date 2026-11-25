@@ -35,7 +35,7 @@ Are you facing performance bottlenecks, high resource usage, inefficient code or
 
 ---
 
-## What I can do
+## What We can do
 
 | Area | What you get |
 |---|---|
@@ -49,7 +49,7 @@ Are you facing performance bottlenecks, high resource usage, inefficient code or
 
 ---
 
-## How I work
+## 📋How We work
 
 1. **Audit:** hardware, drivers, BIOS, power/thermal profile and the current OS state.
 2. **Baseline:** repeatable benchmarks (CapFrameX, in-game benchmark maps) before anything is changed.
@@ -58,7 +58,7 @@ Are you facing performance bottlenecks, high resource usage, inefficient code or
 
 ---
 
-## Key principles
+## 💎Key principles
 
 - **Measure first.** Every tweak carries an evidence label: `proven`, `situational`, `unproven` or `placebo`. Placebo tweaks are never applied, and unproven ones need an explicit flag.
 - **Reversible changes.** Registry and power-plan changes are written to an undo log (`undo-log.jsonl`) before they happen, and `Undo-WinOma` restores them in reverse order. Removal of apps and services is not covered by the undo engine yet, so those tools warn before acting.
@@ -68,9 +68,9 @@ Are you facing performance bottlenecks, high resource usage, inefficient code or
 
 ---
 
-## Profiles: Full and Ultimate
+## ⚙️Profiles: Full and Ultimate
 
-| | **Full** | **Ultimate** |
+| | **⚡Full** | **🔥Ultimate** |
 |---|---|---|
 | For | Daily PCs, work and gaming | Dedicated competitive gaming PCs |
 | Approach | Low-risk tweaks that keep the system stable, secure and usable | Aggressive tweaks for maximum low latency |
@@ -92,7 +92,8 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 | **WinOma Bloatware Remover** | Menu-driven removal of preinstalled Windows apps (Copilot, Teams, Clipchamp, Feedback Hub and more), one by one or all at once. | Moderate |
 | **WinOma USB Power Tweak** | USB device and root hub power-management tuning. | Advanced |
 
-> **Before you run anything:** create a restore point, read the script and test on a non-critical machine first.
+> [!CAUTION]
+> **Before you run anything:** Create a system restore point, inspect the script contents, and test on a non-critical machine first.
 
 ---
 
