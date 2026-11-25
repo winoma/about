@@ -91,7 +91,7 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 </div>
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\WinOma_Doctor.ps1
+powershell -ExecutionPolicy Bypass -File .\WinOma_Scan.ps1
 ```
 
 ---
