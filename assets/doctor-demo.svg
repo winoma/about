@@ -86,7 +86,7 @@
     </g>
     <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.757;0.96" dur="14s" repeatCount="indefinite"/>
       <text x="24" y="480"><tspan fill="#b57bff" font-weight="bold">@winoma &gt;&gt;</tspan><tspan fill="#e6e1f0"> Want 95+? Book a tune-up: </tspan><tspan fill="#26a5e4">t.me/omarizzww</tspan></text>
-      <rect x="450" y="468" width="9" height="16" fill="#b57bff">
+      <rect x="444" y="468" width="9" height="16" fill="#b57bff">
         <animate attributeName="opacity" calcMode="discrete" values="1;0" dur="1s" repeatCount="indefinite"/>
       </rect>
     </g>
