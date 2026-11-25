@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="banner.png" alt="WinOma: PC Performance Experts" width="100%">
+<img src="assets/banner-animated.svg" alt="WinOma: PC Performance Experts" width="100%">
 
 # WinOma Optimization Service
 
