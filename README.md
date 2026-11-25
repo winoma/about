@@ -5,7 +5,7 @@
 # WinOma Optimization Service
 
 <a href="https://winoma.app">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=650&lines=Low+System+Latency+%26+Stable+Frametimes;Benchmarked+%26+Fully+Reversible;Windows+11+%26+Windows+10+OS+Optimization" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=650&lines=Low+System+Latency+%26+Stable+Frametimes;Benchmarked+%26+Fully+Reversible;Minimized+Input+Lag+%26+Boost+FPS" alt="Typing SVG" />
 </a>
 
 [![Supported OS](https://img.shields.io/badge/Windows-11%20%7C%2010-0078D4?style=for-the-badge&logo=windows)](https://microsoft.com)
