@@ -1,14 +1,17 @@
 <div align="center">
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/banner-mobile.svg">
+  <source media="(max-width: 480px)" srcset="assets/banner-mobile.svg">
   <img src="assets/banner-animated.svg" alt="WinOma: PC Performance Experts" width="100%">
 </picture>
 
 # WinOma Optimization Service
 
 <a href="https://winoma.app">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=650&lines=Low+System+Latency+%26+Stable+Frametimes;Benchmarked+%26+Fully+Reversible;Minimized+Input+Lag+%26+Boost+FPS" alt="Typing SVG" />
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=430&lines=Low+System+Latency+%26+Stable+Frametimes;Benchmarked+%26+Fully+Reversible;Minimized+Input+Lag+%26+Boost+FPS">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=650&lines=Low+System+Latency+%26+Stable+Frametimes;Benchmarked+%26+Fully+Reversible;Minimized+Input+Lag+%26+Boost+FPS" alt="Typing SVG" />
+  </picture>
 </a>
 
 [![Supported OS](https://img.shields.io/badge/Windows-11%20%7C%2010-0078D4?style=for-the-badge&logo=windows)](#faq)
@@ -83,7 +86,7 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 
 <div align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/scan-demo-mobile.svg">
+    <source media="(max-width: 480px)" srcset="assets/scan-demo-mobile.svg">
     <img src="assets/scan-demo.svg" alt="WinOma Scan running a read-only audit" width="100%">
   </picture>
 </div>
