@@ -6,11 +6,11 @@
 
 **PC performance experts: deep Windows tuning, low latency and stable frametimes.**
 
-[![PowerShell Version](https://img.shields.io/badge/PowerShell-5.1%2B-blue.svg?style=for-the-badge&logo=powershell)](https://microsoft.com/powershell)
 [![Supported OS](https://img.shields.io/badge/Windows-11%20%7C%2010-0078D4?style=for-the-badge&logo=windows)](https://microsoft.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
-[![Anti-Cheat Safe](https://img.shields.io/badge/Anti--Cheat%20Safe-Vanguard%20%7C%20EAC%20%7C%20BattlEye-2ea44f?style=for-the-badge&logo=shield&logoColor=white)](#faq)
 [![Status](https://img.shields.io/badge/Status-Active%20Development-orange?style=for-the-badge&logo=github)](https://github.com/omarizzw/winoma)
+
+[![Anti-Cheat Safe](https://img.shields.io/badge/Anti--Cheat%20Safe-Vanguard%20%7C%20EAC%20%7C%20BattlEye-2ea44f?style=for-the-badge&logo=shield&logoColor=white)](#faq)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 [![WEBSITE](https://img.shields.io/badge/-WINOMA.APP-8A2BE2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://winoma.app)
 [![MAIN CHANNEL](https://img.shields.io/badge/-MAIN%20CHANNEL-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/win_oma)
