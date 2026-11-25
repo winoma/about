@@ -19,10 +19,6 @@
 [![MAIN CHANNEL](https://img.shields.io/badge/-MAIN%20CHANNEL-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/win_oma)
 [![RESULTS](https://img.shields.io/badge/-RESULTS-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/winoma_results)
 
-<br>
-
-<img src="assets/doctor-demo.svg" alt="WinOma Doctor running a read-only scan" width="100%">
-
 </div>
 
 ---
@@ -83,6 +79,16 @@ Are you facing performance bottlenecks, high resource usage, inefficient code or
 | Includes | Safe and moderate tweaks | Everything in Full plus Ultimate-only tweaks |
 
 Advanced-risk tweaks are never applied in Full. Windows security features that cost performance (such as Memory Integrity) are Ultimate-only, with a clear warning.
+
+---
+
+## 🩺WinOma Doctor
+
+**WinOma Doctor** is a lightweight, **read-only** diagnostic utility designed to evaluate your system's latency posture and overall readiness in seconds. It analyzes key OS and hardware bottlenecks to generate a **0–100 performance score**—making zero modifications to your system and collecting no personal data.
+
+<div align="center">
+  <img src="assets/doctor-demo.svg" alt="WinOma Doctor running a read-only scan" width="100%">
+</div>
 
 ---
 
