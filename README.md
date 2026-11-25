@@ -56,7 +56,35 @@ Are you facing performance bottlenecks, high resource usage, inefficient code or
 - **Reversible changes.** Registry and power-plan changes are written to an undo log (`undo-log.jsonl`) before they happen, and `Undo-WinOma` restores them in reverse order. Removal of apps and services is not covered by the undo engine yet, so those tools warn before acting.
 - **Safe power plans.** WinOma clones the active power plan and edits the copy. Your original plan is never modified, and undo switches back and deletes the clone.
 - **Hardware-aware.** Pre-flight detects laptop vs desktop, hybrid Intel CPUs (P/E cores), administrator rights and the Windows build, then skips tweaks that don't fit the machine.
-- **Restore point and log.** A restore point is requested before changes (Windows limits it to one per 24 hours by default), and every run writes a log and a JSON report to `C:\ProgramData
+- **Restore point and log.** A restore point is requested before changes (Windows limits it to one per 24 hours by default), and every run writes a log and a JSON report to `C:\ProgramData\WinOma\Logs`.
+
+---
+
+## ⚙️Profiles: Full and Ultimate
+
+| | **⚡Full** | **🔥Ultimate** |
+|---|---|---|
+| For | Daily PCs, work and gaming | Dedicated competitive gaming PCs |
+| Approach | Low-risk, stable, secure | Aggressive, maximum low latency |
+| Trade-offs | None expected | May reduce security, power saving or convenience |
+| Confirmation | Standard | User must type `I UNDERSTAND` |
+| Includes | Safe and moderate tweaks | Full + Ultimate-only tweaks |
+
+Advanced-risk tweaks are never applied in Full. Windows security features that cost performance (such as Memory Integrity) are Ultimate-only, with a clear warning.
+
+---
+
+## 🔍WinOma Scan
+
+**WinOma Scan** is a lightweight, **read-only** diagnostic utility that evaluates your system's latency posture and overall readiness in seconds. It analyzes key OS and hardware bottlenecks to generate a **0–100 performance score**, making zero modifications to your system and collecting no personal data.
+
+<div align="center">
+  <img src="assets/scan-demo.svg" alt="WinOma Scan running a read-only audit" width="100%">
+</div>
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\WinOma_Scan.ps1
+```
 ---
 
 ## 🛠️Tools in this repository
