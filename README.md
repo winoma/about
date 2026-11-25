@@ -4,7 +4,9 @@
 
 # WinOma Optimization Service
 
-**PC performance experts: deep Windows tuning, low latency and stable frametimes.**
+<a href="https://winoma.app">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=650&lines=Heqiqet+Emil+SIRYOZZ;IMDAT+ISMAYILOV;Rustemgildeyiyy" alt="Typing SVG" />
+</a>
 
 [![Supported OS](https://img.shields.io/badge/Windows-11%20%7C%2010-0078D4?style=for-the-badge&logo=windows)](https://microsoft.com)
 [![Status](https://img.shields.io/badge/Status-Active%20Development-orange?style=for-the-badge&logo=github)](https://github.com/omarizzw/winoma)
@@ -58,11 +60,11 @@ I'm **Omar Ilyasov** ([omarizzw](https://github.com/omarizzw)), founder of **Win
 
 ## Key principles
 
-* **Measure first.** Every tweak carries an evidence label: `proven`, `situational`, `unproven` or `placebo`. Placebo tweaks are never applied, and unproven ones need an explicit flag.
-* **Reversible changes.** Registry and power-plan changes are written to an undo log (`undo-log.jsonl`) before they happen, and `Undo-WinOma` restores them in reverse order. Removal of apps and services is not covered by the undo engine yet, so those tools warn before acting.
-* **Safe power plans.** WinOma clones the active power plan and edits the copy. Your original plan is never modified, and undo switches back and deletes the clone.
-* **Hardware-aware.** Pre-flight detects laptop vs desktop, hybrid Intel CPUs (P/E cores), administrator rights and the Windows build, then skips tweaks that don't fit the machine.
-* **Restore point and log.** A restore point is requested before changes (Windows limits it to one per 24 hours by default), and every run writes a log and a JSON report to `C:\ProgramData\WinOma\Logs`.
+- **Measure first.** Every tweak carries an evidence label: `proven`, `situational`, `unproven` or `placebo`. Placebo tweaks are never applied, and unproven ones need an explicit flag.
+- **Reversible changes.** Registry and power-plan changes are written to an undo log (`undo-log.jsonl`) before they happen, and `Undo-WinOma` restores them in reverse order. Removal of apps and services is not covered by the undo engine yet, so those tools warn before acting.
+- **Safe power plans.** WinOma clones the active power plan and edits the copy. Your original plan is never modified, and undo switches back and deletes the clone.
+- **Hardware-aware.** Pre-flight detects laptop vs desktop, hybrid Intel CPUs (P/E cores), administrator rights and the Windows build, then skips tweaks that don't fit the machine.
+- **Restore point and log.** A restore point is requested before changes (Windows limits it to one per 24 hours by default), and every run writes a log and a JSON report to `C:\ProgramData\WinOma\Logs`.
 
 ---
 
