@@ -1,17 +1,11 @@
 <div align="center">
 
-<picture>
-  <source media="(max-width: 480px)" srcset="assets/banner-mobile.svg">
-  <img src="assets/banner-animated.svg" alt="WinOma: PC Performance Experts" width="100%">
-</picture>
+<img src="assets/banner-animated.svg" alt="WinOma: PC Performance Experts" width="100%">
 
 # WinOma Optimization Service
 
 <a href="https://winoma.app">
-  <picture>
-    <source media="(max-width: 480px)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=430&lines=Low+System+Latency+%26+Stable+Frametimes;Benchmarked+%26+Fully+Reversible;Minimized+Input+Lag+%26+Boost+FPS">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=650&lines=Low+System+Latency+%26+Stable+Frametimes;Benchmarked+%26+Fully+Reversible;Minimized+Input+Lag+%26+Boost+FPS" alt="Typing SVG" />
-  </picture>
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=650&lines=Low+System+Latency+%26+Stable+Frametimes;Benchmarked+%26+Fully+Reversible;Minimized+Input+Lag+%26+Boost+FPS" alt="Typing SVG" />
 </a>
 
 [![Supported OS](https://img.shields.io/badge/Windows-11%20%7C%2010-0078D4?style=for-the-badge&logo=windows)](#faq)
@@ -62,39 +56,7 @@ Are you facing performance bottlenecks, high resource usage, inefficient code or
 - **Reversible changes.** Registry and power-plan changes are written to an undo log (`undo-log.jsonl`) before they happen, and `Undo-WinOma` restores them in reverse order. Removal of apps and services is not covered by the undo engine yet, so those tools warn before acting.
 - **Safe power plans.** WinOma clones the active power plan and edits the copy. Your original plan is never modified, and undo switches back and deletes the clone.
 - **Hardware-aware.** Pre-flight detects laptop vs desktop, hybrid Intel CPUs (P/E cores), administrator rights and the Windows build, then skips tweaks that don't fit the machine.
-- **Restore point and log.** A restore point is requested before changes (Windows limits it to one per 24 hours by default), and every run writes a log and a JSON report to `C:\ProgramData\WinOma\Logs`.
-
----
-
-## ⚙️Profiles: Full and Ultimate
-
-| | **⚡Full** | **🔥Ultimate** |
-|---|---|---|
-| For | Daily PCs, work and gaming | Dedicated competitive gaming PCs |
-| Approach | Low-risk, stable, secure | Aggressive, maximum low latency |
-| Trade-offs | None expected | May reduce security, power saving or convenience |
-| Confirmation | Standard | User must type `I UNDERSTAND` |
-| Includes | Safe and moderate tweaks | Full + Ultimate-only tweaks |
-
-Advanced-risk tweaks are never applied in Full. Windows security features that cost performance (such as Memory Integrity) are Ultimate-only, with a clear warning.
-
----
-
-## 🔍WinOma Scan
-
-**WinOma Scan** is a lightweight, **read-only** diagnostic utility that evaluates your system's latency posture and overall readiness in seconds. It analyzes key OS and hardware bottlenecks to generate a **0–100 performance score**, making zero modifications to your system and collecting no personal data.
-
-<div align="center">
-  <picture>
-    <source media="(max-width: 480px)" srcset="assets/scan-demo-mobile.svg">
-    <img src="assets/scan-demo.svg" alt="WinOma Scan running a read-only audit" width="100%">
-  </picture>
-</div>
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\WinOma_Scan.ps1
-```
-
+- **Restore point and log.** A restore point is requested before changes (Windows limits it to one per 24 hours by default), and every run writes a log and a JSON report to `C:\ProgramData
 ---
 
 ## 🛠️Tools in this repository
