@@ -2,7 +2,7 @@
 
 <img src="banner.png" alt="WinOma: PC Performance Experts" width="100%">
 
-# HEQIQET SERYOZ EMIL
+# WinOma Optimization Service
 
 **PC performance experts: deep Windows tuning, low latency and stable frametimes.**
 
