@@ -107,11 +107,10 @@ powershell -ExecutionPolicy Bypass -File .\WinOma_Scan.ps1
 
 **Used during our remote tune-ups** (not published)
 
-- 🟢 **WinOma Safe Performance Tweaks** (Safe): conservative tweaks (Power Throttling, Game DVR) with automatic backup and restore.
-- 🟡 **WinOma System Tweaker** (Moderate): performance, privacy and UI tweaks with live status, plus Restore Defaults.
-- 🟡 **WinOma Services (PC)** (Moderate): disables unneeded Windows services and background components.
-- 🟡 **WinOma Bloatware Remover** (Moderate): menu-driven removal of preinstalled apps (Copilot, Teams, Clipchamp, Feedback Hub and more), one by one or all at once.
-- 🔴 **WinOma USB Power Tweak** (Advanced): USB device and root hub power-management tuning.
+- 🟡 **WinOma Tweaker ++** (Moderate–Advanced): all-in-one tweaker that combines System Tweaker, Services Cleaner and Bloatware Remover, plus kernel and CPU/GPU affinity tweaks. Live status for every tweak, Apply All and Restore Defaults.
+- 🟢 **WinOma Power Tweaker** (Safe): power plan and Power Throttling tuning, with automatic backup and restore.
+- 🔴 **WinOma Device Tweaker** (Advanced): device-level tuning, including USB device and root hub power management.
+- 🔴 **WinOma Input Lag and Latency Tweaker** (Advanced): reduces input lag and system latency for smoother, more consistent frame times in games.
 
 > [!CAUTION]
 > **Before you run anything:** Create a system restore point, inspect the script contents, and test on a non-critical machine first.
