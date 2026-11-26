@@ -112,19 +112,6 @@ powershell -ExecutionPolicy Bypass -File .\WinOma_Scan.ps1
 - 🔴 **WinOma Device Tweaker** (Advanced): device-level tuning, including USB device and root hub power management.
 - 🔴 **WinOma Input Lag and Latency Tweaker** (Advanced): reduces input lag and system latency for smoother, more consistent frame times in games.
 
-> [!CAUTION]
-> **Before you run anything:** Create a system restore point, inspect the script contents, and test on a non-critical machine first.
-
----
-
-## 📄Disclaimer
-
-Some tweaks reduce background services, convenience features or security protections. Ultimate-profile tweaks can lower security and increase power use and heat, so don't use them on work PCs or laptops running on battery. Results vary by hardware. Use at your own risk.
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## 📫Contact Us
 
 <div align="center">
