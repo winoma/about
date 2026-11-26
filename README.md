@@ -81,10 +81,9 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 
 **WinOma Scan** is a free, **read-only** check of your PC's latency and performance setup. In under a minute it runs 24 checks across power, gaming, background load and hardware, then gives you a **0–100 performance score**. It changes nothing on your PC and sends nothing anywhere.
 
-<picture>
-  <source media="(max-width: 600px) and (hover: none) and (pointer: coarse)" srcset="assets/scan-demo-mobile.svg">
+<div align="center">
   <img src="assets/scan-demo.svg" alt="WinOma Scan running a read-only audit" width="100%">
-</picture>
+</div>
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\WinOma_Scan.ps1
