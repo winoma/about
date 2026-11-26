@@ -34,7 +34,7 @@ param(
 
 $ErrorActionPreference = 'SilentlyContinue'
 $Version         = '1.2.0-beta'
-$AllowTechnician = $true
+$AllowTechnician = $false
 $CodeFormat      = 1
 $Contact         = 't.me/omarizzww'
 $Website         = 'winoma.app'
