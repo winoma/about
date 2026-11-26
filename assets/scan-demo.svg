@@ -116,7 +116,7 @@
     </g>
     <g opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.7;0.96" dur="16s" repeatCount="indefinite"/>
       <text x="24" y="516"><tspan fill="#b57bff" font-weight="bold">winoma &gt;&gt;</tspan><tspan fill="#5fd7e6"> Send this code to t.me/omarizzww for your full report.</tspan></text>
-      <rect x="522" y="504" width="9" height="16" fill="#b57bff">
+      <rect x="547" y="504" width="9" height="16" fill="#b57bff">
         <animate attributeName="opacity" calcMode="discrete" values="1;0" dur="1s" repeatCount="indefinite"/>
       </rect>
     </g>
