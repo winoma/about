@@ -67,13 +67,13 @@ Are you facing performance bottlenecks, high resource usage, inefficient code or
 
 ## ⚙️Profiles: Full and Ultimate
 
-| | **⚡Full** | **🔥Ultimate** |
-|---|---|---|
-| For | Daily PCs, work and gaming | Dedicated competitive gaming PCs |
-| Approach | Low-risk, stable, secure | Aggressive, maximum low latency |
-| Trade-offs | None expected | May reduce security, power saving or convenience |
-| Confirmation | Standard | User must type `I UNDERSTAND` |
-| Includes | Safe and moderate tweaks | Full + Ultimate-only tweaks |
+   | | **⚡Full** | **🔥Ultimate** |
+   |---|---|---|
+   | For | Daily PCs, work and gaming | Dedicated competitive gaming PCs |
+   | Approach | Low-risk, stable, secure | Aggressive, maximum low latency |
+   | Trade-offs | None expected | May reduce security, power saving or convenience |
+   | Confirmation | Standard | User must type `I UNDERSTAND` |
+   | Includes | Safe and moderate tweaks | Full + Ultimate-only tweaks |
 
 Advanced-risk tweaks are never applied in Full. Windows security features that cost performance (such as Memory Integrity) are Ultimate-only, with a clear warning.
 
