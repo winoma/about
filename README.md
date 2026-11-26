@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src="assets/banner-animated.svg" alt="WinOma: PC Performance Experts" width="100%">
+<picture>
+  <source media="(max-width: 600px) and (hover: none) and (pointer: coarse)" srcset="assets/banner-mobile.svg">
+  <img src="assets/banner-animated.svg" alt="WinOma: PC Performance Experts" width="100%">
+</picture>
 
 # WinOma Optimization Service
 
@@ -13,6 +16,8 @@
 [![Anti-Cheat Safe](https://img.shields.io/badge/Anti--Cheat%20Safe-Vanguard%20%7C%20EAC%20%7C%20BattlEye-2ea44f?style=for-the-badge&logo=shield&logoColor=white)](#faq)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
+**[About](#ℹ️about) · [WinOma Scan](#winoma-scan) · [Tools](#️toolkit) · [FAQ](#faq) · [Contact](#contact-us)**
+
 </div>
 
 ---
@@ -21,7 +26,7 @@
 
 Are you facing performance bottlenecks, high resource usage, inefficient code or system latency issues?
 
-**WinOma Optimization Service** is founded by **Omar Ilyasov** ([omarizzw](https://github.com/omarizzw)) and Co-Founder **Metin Quliyev** ([t1nt1n](https://github.com/tintin323)). Based in Baku, Azerbaijan and working remotely with clients worldwide, we specialize in high-performance software development, code optimization, system automation and deep Windows OS tuning. Combining fundamental computer engineering principles with practical software design, we deliver custom tweaks and maximum performance for your PC or laptop.
+**WinOma Optimization Service** is founded by **Omar Ilyasov** ([omarizzw](https://github.com/omarizzw)) and Co-Founder **Metin Quliyev** ([tintin323](https://github.com/tintin323)). Based in Baku, Azerbaijan and working remotely with clients worldwide, we specialize in high-performance software development, code optimization, system automation and deep Windows OS tuning. Combining fundamental computer engineering principles with practical software design, we deliver custom tweaks and maximum performance for your PC or laptop.
 
 **WinOma** (Windows Optimization & Maintenance Architecture) is a data-driven optimization framework for **Windows 11** (main target) and **Windows 10** (best effort). It targets system latency, background overhead and frametime consistency, with every change measured, logged and reversible where the engine supports it.
 
@@ -78,9 +83,10 @@ Advanced-risk tweaks are never applied in Full. Windows security features that c
 
 **WinOma Scan** is a free, **read-only** check of your PC's latency and performance setup. In under a minute it runs 24 checks across power, gaming, background load and hardware, then gives you a **0–100 performance score**. It changes nothing on your PC and sends nothing anywhere.
 
-<div align="center">
+<picture>
+  <source media="(max-width: 600px) and (hover: none) and (pointer: coarse)" srcset="assets/scan-demo-mobile.svg">
   <img src="assets/scan-demo.svg" alt="WinOma Scan running a read-only audit" width="100%">
-</div>
+</picture>
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\WinOma_Scan.ps1
@@ -93,9 +99,14 @@ powershell -ExecutionPolicy Bypass -File .\WinOma_Scan.ps1
 
 ---
 
-## 🛠️Tools in this repository
+## 🛠️Toolkit
+
+**Available in this repository**
 
 - 🟢 **WinOma Scan** (Safe, read-only): system latency and health audit with a 0–100 score.
+
+**Used during our remote tune-ups** (not published)
+
 - 🟢 **WinOma Safe Performance Tweaks** (Safe): conservative tweaks (Power Throttling, Game DVR) with automatic backup and restore.
 - 🟡 **WinOma System Tweaker** (Moderate): performance, privacy and UI tweaks with live status, plus Restore Defaults.
 - 🟡 **WinOma Services (PC)** (Moderate): disables unneeded Windows services and background components.
@@ -134,6 +145,20 @@ This project is licensed under the [MIT License](LICENSE).
 ## FAQ
 
 <details>
+<summary><b>Is WinOma Scan safe to run?</b></summary>
+
+Yes. It only reads settings and system information. It changes nothing, installs nothing and sends nothing over the network. The script is plain text, so you can open it in Notepad and read every line before running it.
+
+</details>
+
+<details>
+<summary><b>Why does the command use <code>-ExecutionPolicy Bypass</code>?</b></summary>
+
+Windows blocks downloaded PowerShell scripts by default. `-ExecutionPolicy Bypass` allows only this one run of this one script. It does not change your system's policy.
+
+</details>
+
+<details>
 <summary><b>Does WinOma work on laptops without draining the battery?</b></summary>
 
 Yes. WinOma detects the chassis and power source automatically. On laptops, battery-draining tweaks are bypassed, and EcoQoS policies are applied to keep background apps on E-Cores.
@@ -155,9 +180,9 @@ Most free tools apply generic, untested registry files. WinOma is benchmark-driv
 </details>
 
 <details>
-<summary><b>Does WinOma work on plenty of games?</b></summary>
+<summary><b>Does WinOma work with every game?</b></summary>
 
-Yes. Unlike many services that are tied to one specific game, WinOma optimizes your entire system, so all your games benefit.
+Yes. Unlike services that are tied to one specific game, WinOma optimizes your entire system, so all your games benefit.
 
 </details>
 
