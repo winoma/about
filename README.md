@@ -15,6 +15,7 @@
 [![Status](https://img.shields.io/badge/Status-Active%20Development-orange?style=for-the-badge&logo=github)](https://github.com/winoma/about)
 [![Anti-Cheat Safe](https://img.shields.io/badge/Anti--Cheat%20Safe-Vanguard%20%7C%20EAC%20%7C%20BattlEye-2ea44f?style=for-the-badge&logo=shield&logoColor=white)](#faq)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/winoma/about/badge)](https://securityscorecards.dev/viewer/?uri=github.com/winoma/about)
 
 **[About](#ℹ️about) · [WinOma Scan](#winoma-scan) · [Tools](#️toolkit) · [FAQ](#faq) · [Contact](#contact-us)**
 
