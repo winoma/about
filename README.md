@@ -1,9 +1,6 @@
 <div align="center">
 
-<picture>
-  <source media="(max-width: 600px) and (hover: none) and (pointer: coarse)" srcset="assets/banner-mobile.svg">
-  <img src="assets/banner-animated.svg" alt="WinOma: PC Performance Experts" width="100%">
-</picture>
+<img src="assets/banner-animated.svg" alt="WinOma: PC Performance Experts" width="100%">
 
 # WinOma Optimization Service
 
