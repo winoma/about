@@ -2,10 +2,12 @@
 
 ## Supported Versions
 
-| Version | Supported |
-| ------- | --------- |
-| 1.2.x   | :white_check_mark: |
-| < 1.2   | :x: |
+This policy covers **WinOma Scan** (`WinOma_Scan.ps1`), the script published in this repository.
+
+| WinOma Scan version | Supported |
+| ------------------- | --------- |
+| 1.3.x               | :white_check_mark: |
+| < 1.3               | :x: |
 
 ## Reporting a Vulnerability
 
