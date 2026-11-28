@@ -124,7 +124,7 @@ powershell -ExecutionPolicy Bypass -File .\WinOma_Scan.ps1
 
 </div>
 
-- E-Mail: [hello@winoma.app](mailto:hello@winoma.app)
+- E-Mail: wiinooma@gmail.com
 - Telegram: [@omarizzww](https://t.me/omarizzww)
 
 ---
