@@ -3,7 +3,9 @@
     WinOma Scan - read-only PC health and latency audit.
 .DESCRIPTION
     Measures power, gaming, background load and hardware settings and gives a
-    0-100 score. It never changes the system and sends nothing anywhere.
+    0-100 score. It never changes the system and sends nothing anywhere. The
+    only thing it writes is the scan code to the clipboard, and it says so
+    before it does.
 
     Customer mode (default): a score per area, the number of optimization
     opportunities, the estimated score after a tune-up and a scan code.
@@ -33,17 +35,19 @@ param(
 )
 
 $ErrorActionPreference = 'SilentlyContinue'
-$Version         = '1.2.0-beta'
+$Version         = '1.3.0-beta'
 $AllowTechnician = $false
-$CodeFormat      = 1
+# Scan code format. 1 = weighted sum mod 32 check (v1.2.x, still decoded),
+# 2 = Damm check over GF(32) (catches every single typo and adjacent swap).
+$CodeFormat      = 2
 $Contact         = 't.me/omarizzww'
 $Website         = 'winoma.app'
 $B32             = '0123456789ABCDEFGHJKMNPQRSTVWXYZ'
 $Full            = [string][char]0x2588
 $Empty           = [string][char]0x2591
 $IsAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
-try { $Host.UI.RawUI.WindowTitle = "WinOma Scan $Version" } catch {}
-try { [Console]::OutputEncoding = [System.Text.Encoding]::UTF8 } catch {}
+try { $Host.UI.RawUI.WindowTitle = "WinOma Scan $Version" } catch { Write-Verbose 'Could not set the window title.' }
+try { [Console]::OutputEncoding = [System.Text.Encoding]::UTF8 } catch { Write-Verbose 'Could not switch the console to UTF-8.' }
 
 if (-not $AllowTechnician) { $Technician = $false; $Decode = ''; $Json = $false }
 
@@ -121,7 +125,7 @@ lZrilZDilZ0gIOKVmuKVkOKVkOKVkOKVnQ==
 # ================= Helpers =================
 function Get-ConsoleWidth {
     $w = 0
-    try { $w = $Host.UI.RawUI.WindowSize.Width } catch {}
+    try { $w = $Host.UI.RawUI.WindowSize.Width } catch { Write-Verbose 'Console width unknown, using 100.' }
     if (-not $w -or $w -lt 20) { $w = 100 }
     return $w
 }
@@ -226,7 +230,8 @@ function Get-ActiveStartupCount {
             }
         }
     }
-    $allStartup = @(Get-CimInstance Win32_StartupCommand)
+    # $null (not 0) when the startup list cannot be read, so the check shows N/A.
+    try { $allStartup = @(Get-CimInstance Win32_StartupCommand -ErrorAction Stop) } catch { return $null }
     $active = $allStartup | Where-Object {
         -not $disabledNames.Contains($_.Name) -and
         -not $disabledNames.Contains([System.IO.Path]::GetFileName(($_.Command -replace '"', '')))
@@ -258,13 +263,38 @@ function Get-OpenChecks {
 }
 
 # ================= Scan code =================
+# Check character (format 2): Damm algorithm over GF(32), using the
+# quasigroup r * d = 2r XOR d (polynomial x^5 + x^2 + 1). It detects every
+# single wrong character and every swap of two neighbouring characters.
+function Get-Gf32Double {
+    param([int]$Value)
+    $Value = $Value -shl 1
+    if ($Value -band 32) { $Value = $Value -bxor 0x25 }
+    return $Value
+}
+
+function Get-DammInterim {
+    param([int[]]$Values)
+    $r = 0
+    foreach ($v in $Values) { $r = (Get-Gf32Double $r) -bxor $v }
+    return $r
+}
+
+# Check character (format 1, v1.2.x): weighted sum mod 32. Kept only to decode old codes.
+function Get-LegacyCheck {
+    param([int[]]$Values)
+    $sum = 0
+    for ($i = 0; $i -lt $Values.Count; $i++) { $sum += $Values[$i] * ($i + 1) }
+    return $sum % 32
+}
+
 function ConvertTo-ScanCode {
     param($StateMap, [int]$Score, [bool]$Laptop, [bool]$Vm)
     $sb = New-Object System.Text.StringBuilder
     [void]$sb.Append([Convert]::ToString($CodeFormat, 2).PadLeft(3, '0'))
     [void]$sb.Append($(if ($Laptop) { '1' } else { '0' }))
     [void]$sb.Append($(if ($Vm) { '1' } else { '0' }))
-    [void]$sb.Append([Convert]::ToString([math]::Min($Score, 127), 2).PadLeft(7, '0'))
+    [void]$sb.Append([Convert]::ToString([math]::Max(0, [math]::Min($Score, 127)), 2).PadLeft(7, '0'))
     foreach ($c in $Catalog) {
         $s = $StateMap[$c.Id]
         $pair = '11'
@@ -274,16 +304,9 @@ function ConvertTo-ScanCode {
     $bits = $sb.ToString()
     while ($bits.Length % 5 -ne 0) { $bits += '0' }
 
-    $chars = ''
-    $sum = 0
-    $idx = 0
-    for ($i = 0; $i -lt $bits.Length; $i += 5) {
-        $n = [Convert]::ToInt32($bits.Substring($i, 5), 2)
-        $idx++
-        $sum += $n * $idx
-        $chars += $B32[$n]
-    }
-    $chars += $B32[$sum % 32]
+    $values = for ($i = 0; $i -lt $bits.Length; $i += 5) { [Convert]::ToInt32($bits.Substring($i, 5), 2) }
+    $check  = Get-Gf32Double (Get-DammInterim $values)
+    $chars  = -join (@($values) + $check | ForEach-Object { $B32[$_] })
 
     $groups = for ($i = 0; $i -lt $chars.Length; $i += 4) { $chars.Substring($i, [math]::Min(4, $chars.Length - $i)) }
     return 'WS-' + ($groups -join '-')
@@ -295,21 +318,24 @@ function ConvertFrom-ScanCode {
     $clean = $clean -replace 'O', '0' -replace '[IL]', '1'
     if ($clean.Length -lt 4) { return $null }
 
-    $data  = $clean.Substring(0, $clean.Length - 1)
-    $check = [string]$clean[$clean.Length - 1]
-    $bits  = ''
-    $sum   = 0
-    $idx   = 0
-    foreach ($ch in $data.ToCharArray()) {
+    $values = New-Object System.Collections.Generic.List[int]
+    foreach ($ch in $clean.ToCharArray()) {
         $n = $B32.IndexOf($ch)
         if ($n -lt 0) { return $null }
-        $idx++
-        $sum += $n * $idx
-        $bits += [Convert]::ToString($n, 2).PadLeft(5, '0')
+        $values.Add($n)
     }
-    if ([string]$B32[$sum % 32] -ne $check) { return $null }
+    $data   = $values.GetRange(0, $values.Count - 1).ToArray()
+    $check  = $values[$values.Count - 1]
+    $format = $data[0] -shr 2
+    $valid  = switch ($format) {
+        2       { (Get-DammInterim $values.ToArray()) -eq 0 }
+        1       { (Get-LegacyCheck $data) -eq $check }
+        default { $false }
+    }
+    if (-not $valid) { return $null }
+
+    $bits = -join ($data | ForEach-Object { [Convert]::ToString($_, 2).PadLeft(5, '0') })
     if ($bits.Length -lt 12) { return $null }
-    if ([Convert]::ToInt32($bits.Substring(0, 3), 2) -ne $CodeFormat) { return $null }
 
     $map = @{}
     $pos = 12
@@ -405,7 +431,7 @@ function Exit-Scan {
     if (-not $NoPause) {
         Write-Host ''
         Write-Host '  Press any key to exit...' -ForegroundColor DarkGray
-        try { $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown') } catch {}
+        try { $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown') } catch { Write-Verbose 'No interactive console, exiting without waiting.' }
     }
 }
 
@@ -448,9 +474,10 @@ $IsVM = [bool](($cs.Model -match 'Virtual|VMware|VirtualBox|KVM|QEMU|HVM|Paralle
 
 # ---------- System (info only) ----------
 Start-Area 'system'
-Add-Info 'Windows'     ("{0} (build {1})" -f ($os.Caption -replace 'Microsoft ', ''), $os.BuildNumber)
-Add-Info 'CPU'         ($cpu.Name.Trim())
-Add-Info 'Memory'      ("{0} GB" -f [math]::Round($cs.TotalPhysicalMemory / 1GB))
+# Empty WMI/CIM data is reported as 'Unknown' here and as N/A in scored checks, never as OK.
+Add-Info 'Windows'     ($(if ($os) { "{0} (build {1})" -f ($os.Caption -replace 'Microsoft ', ''), $os.BuildNumber } else { 'Unknown' }))
+Add-Info 'CPU'         ($(if ($cpu -and $cpu.Name) { $cpu.Name.Trim() } else { 'Unknown' }))
+Add-Info 'Memory'      ($(if ($cs -and $cs.TotalPhysicalMemory) { "{0} GB" -f [math]::Round($cs.TotalPhysicalMemory / 1GB) } else { 'Unknown' }))
 Add-Info 'GPU'         ($(if ($gpu) { $gpu.Name } else { 'Not detected' }))
 Add-Info 'Form factor' ($(if ($IsLaptop) { 'Laptop' } else { 'Desktop' }))
 if ($IsVM) { Add-Info 'Environment' 'Virtual machine - GPU, display and memory checks skipped' }
@@ -464,7 +491,8 @@ $planGuid = if ($scheme -match '([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0
 $planName = if ($scheme -match '\(([^)]+)\)') { $Matches[1] } else { 'Unknown' }
 $saver    = 'a1841308-3541-4fab-bc81-f71556f20b4a'
 $balanced = '381b4222-f694-41f0-9685-ff5bb260df2e'
-if     ($planGuid -eq $saver -and -not $IsLaptop)    { Set-Result 'PowerPlan' 'FAIL' $planName }
+if     (-not $planGuid)                              { Set-Result 'PowerPlan' 'SKIP' 'Could not read the active power plan' }
+elseif ($planGuid -eq $saver -and -not $IsLaptop)    { Set-Result 'PowerPlan' 'FAIL' $planName }
 elseif ($planGuid -eq $saver)                        { Set-Result 'PowerPlan' 'WARN' $planName }
 elseif ($planGuid -eq $balanced -and -not $IsLaptop) { Set-Result 'PowerPlan' 'WARN' $planName }
 else                                                 { Set-Result 'PowerPlan' 'OK'   $planName }
@@ -539,14 +567,19 @@ elseif ($procCount -le 180) { Set-Result 'Processes' 'WARN' $procTxt }
 else                        { Set-Result 'Processes' 'FAIL' $procTxt }
 
 $startup = Get-ActiveStartupCount
-if     ($startup -le 3) { Set-Result 'Startup' 'OK'   "$startup active at boot" }
-elseif ($startup -le 8) { Set-Result 'Startup' 'WARN' "$startup active at boot" }
-else                    { Set-Result 'Startup' 'FAIL' "$startup active at boot" }
+if     ($null -eq $startup) { Set-Result 'Startup' 'SKIP' 'Could not read startup apps' }
+elseif ($startup -le 3)     { Set-Result 'Startup' 'OK'   "$startup active at boot" }
+elseif ($startup -le 8)     { Set-Result 'Startup' 'WARN' "$startup active at boot" }
+else                        { Set-Result 'Startup' 'FAIL' "$startup active at boot" }
 
-$usedPct = [math]::Round((1 - $os.FreePhysicalMemory / $os.TotalVisibleMemorySize) * 100)
-if     ($usedPct -le 50) { Set-Result 'RamUse' 'OK'   "$usedPct% right now" }
-elseif ($usedPct -le 75) { Set-Result 'RamUse' 'WARN' "$usedPct% right now" }
-else                     { Set-Result 'RamUse' 'FAIL' "$usedPct% right now" }
+if ($os -and $os.TotalVisibleMemorySize -gt 0 -and $null -ne $os.FreePhysicalMemory) {
+    $usedPct = [math]::Round((1 - $os.FreePhysicalMemory / $os.TotalVisibleMemorySize) * 100)
+    if     ($usedPct -le 50) { Set-Result 'RamUse' 'OK'   "$usedPct% right now" }
+    elseif ($usedPct -le 75) { Set-Result 'RamUse' 'WARN' "$usedPct% right now" }
+    else                     { Set-Result 'RamUse' 'FAIL' "$usedPct% right now" }
+} else {
+    Set-Result 'RamUse' 'SKIP' 'Could not read memory usage'
+}
 
 $bloatList = @(
     'Microsoft.BingNews', 'Microsoft.BingWeather', 'Microsoft.BingSearch', 'Clipchamp.Clipchamp',
@@ -557,8 +590,10 @@ $bloatList = @(
     'Microsoft.PowerAutomateDesktop', 'Microsoft.WindowsMaps', 'Microsoft.MixedReality.Portal',
     'Microsoft.SkypeApp', 'Microsoft.OutlookForWindows', 'Microsoft.Windows.DevHome'
 )
-$bloat = @(Get-AppxPackage | Where-Object { $bloatList -contains $_.Name }).Count
-if     ($bloat -le 2) { Set-Result 'Bloat' 'OK'   "$bloat found" }
+$bloat = $null
+try { $bloat = @(Get-AppxPackage -ErrorAction Stop | Where-Object { $bloatList -contains $_.Name }).Count } catch { $bloat = $null }
+if     ($null -eq $bloat) { Set-Result 'Bloat' 'SKIP' 'Could not read installed apps' }
+elseif ($bloat -le 2) { Set-Result 'Bloat' 'OK'   "$bloat found" }
 elseif ($bloat -le 6) { Set-Result 'Bloat' 'WARN' "$bloat found" }
 else                  { Set-Result 'Bloat' 'FAIL' "$bloat found" }
 
@@ -628,10 +663,14 @@ if ($IsVM) {
     if ($msiStatus) { Set-Result 'GpuMsi' $msiStatus $msiDetail }
 }
 
-$uptimeDays = [math]::Round(((Get-Date) - $os.LastBootUpTime).TotalDays, 1)
-if     ($uptimeDays -le 3) { Set-Result 'Uptime' 'OK'   "$uptimeDays days" }
-elseif ($uptimeDays -le 7) { Set-Result 'Uptime' 'WARN' "$uptimeDays days" }
-else                       { Set-Result 'Uptime' 'FAIL' "$uptimeDays days" }
+if ($os -and $os.LastBootUpTime) {
+    $uptimeDays = [math]::Round(((Get-Date) - $os.LastBootUpTime).TotalDays, 1)
+    if     ($uptimeDays -le 3) { Set-Result 'Uptime' 'OK'   "$uptimeDays days" }
+    elseif ($uptimeDays -le 7) { Set-Result 'Uptime' 'WARN' "$uptimeDays days" }
+    else                       { Set-Result 'Uptime' 'FAIL' "$uptimeDays days" }
+} else {
+    Set-Result 'Uptime' 'SKIP' 'Could not read the last boot time'
+}
 
 $pending = (Test-Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending') -or
            (Test-Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired')
@@ -639,8 +678,9 @@ if ($pending) { Set-Result 'PendingRestart' 'WARN' 'Restart needed to finish upd
 
 if ($IsAdmin) {
     $bcd = (bcdedit /enum '{current}') -join "`n"
-    if ($bcd -match 'useplatformclock\s+Yes') { Set-Result 'Timer' 'WARN' 'HPET forced on (useplatformclock)' }
-    else                                       { Set-Result 'Timer' 'OK'   'Windows default' }
+    if     ($LASTEXITCODE -ne 0 -or -not $bcd)    { Set-Result 'Timer' 'SKIP' 'Could not read boot settings' }
+    elseif ($bcd -match 'useplatformclock\s+Yes') { Set-Result 'Timer' 'WARN' 'HPET forced on (useplatformclock)' }
+    else                                           { Set-Result 'Timer' 'OK'   'Windows default' }
 } else {
     Set-Result 'Timer' 'SKIP' 'Needs administrator'
 }
@@ -670,11 +710,14 @@ if ($Technician) {
         Write-Prompt 'No optimization opportunities found. This PC is well tuned.' 'Green'
     }
     Write-Host ''
+    # The clipboard is the only thing the scan touches, so say so before it happens.
+    Write-Prompt 'Copying your scan code to the clipboard (this replaces what is on it now).' 'DarkGray'
+    $copied = $false
+    try { Set-Clipboard -Value $scanCode -ErrorAction Stop; $copied = $true } catch { $copied = $false }
+    Write-Host ''
     Write-Host '  YOUR SCAN CODE   ' -ForegroundColor Magenta -NoNewline
     Write-Host $scanCode -ForegroundColor White -NoNewline
-    $copied = $false
-    try { Set-Clipboard -Value $scanCode; $copied = $true } catch {}
-    if ($copied) { Write-Host '   (copied)' -ForegroundColor DarkGray } else { Write-Host '' }
+    if ($copied) { Write-Host '   (copied)' -ForegroundColor DarkGray } else { Write-Host '   (copy failed - select and copy it by hand)' -ForegroundColor DarkGray }
     Write-Host ''
     Write-Prompt ("Send this code to $Contact for your full report.") 'Cyan'
     Write-Prompt ("Remote tune-ups: $Website") 'Cyan'

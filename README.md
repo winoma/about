@@ -134,7 +134,7 @@ powershell -ExecutionPolicy Bypass -File .\WinOma_Scan.ps1
 <details>
 <summary><b>Is WinOma Scan safe to run?</b></summary>
 
-Yes. It only reads settings and system information. It changes nothing, installs nothing and sends nothing over the network. The script is plain text, so you can open it in Notepad and read every line before running it.
+Yes. It only reads settings and system information. It changes nothing, installs nothing and sends nothing over the network. The only thing it writes is your scan code to the clipboard, and it tells you before it does. The script is plain text, so you can open it in Notepad and read every line before running it.
 
 </details>
 
